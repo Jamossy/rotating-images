@@ -1,0 +1,88 @@
+<DOCTYPE!>
+<html>
+<head> 
+<title></title> 
+</head>
+
+<style>
+
+.stage {
+	width: 300px; height: 300px;
+	-webkit-perspective:1600px;
+	-webkit-perspective-origin: 50% -240px;
+	margin: 100px;
+}
+
+figure {
+	display: block; position: absolute;
+	width: 300px; height: 300px;
+}
+
+.cube{ -webkit-transform-style: preserve-3d;}
+figure{ -webkit-transform-origin: 50% 50% 0;}
+.front{ -webkit-transform: translateZ(150px); background-color: #0000ffff;} 
+.back{ -webkit-transform: rotateY(180deg) translateZ(150px); background-color: #ffff1a;} 
+.top{ -webkit-transform: rotateX(90deg) translateZ(150px); background-color: #0052cc;} 
+.bottom{ -webkit-transform: rotateX(-90deg) translateZ(150px); background-color: #00ff00;}
+.left{ -webkit-transform: rotateY(90deg) translateZ(150px); background-color: #ff6600;}
+.right{ -webkit-transform: rotateY(-90deg) translateZ(150px); background-color: #cc2900;}
+	
+@-webkit-keyframes rotate{
+	0%{ -webkit-transform: rotateY(120deg);}
+	25%{ -webkit-transform:rotateX(-65deg);}
+	35%{ -webkit-transform:rotateY(-120deg);}
+	50%{ -webkit-transform:rotateX(-65deg);}
+	65%{ -webkit-transform:rotateY(120deg);}
+	85%{ -webkit-transform:rotateX(65deg);}
+	100%{ -webkit-transform:rotateY(-120deg);}
+}
+
+.cube{ -webkit-animation: rotate 10s infinite linear;}
+
+.top{
+	background-image: url(https://ichef.bbci.co.uk/news/624/cpsprodpb/1EFF/production/_86153970_gastonmaqueda_banffnationalparkgreywolf2011permission.jpg);
+	background-size: 100%;
+}
+
+.right{
+	background-image: url(https://i.pinimg.com/originals/b5/c2/3a/b5c23a53a55f434b1aa807cc35c1be2b.jpg);
+	background-size: 100%;
+}
+
+.bottom{
+	background-image: url(https://www.levif.be/medias/4165/2132787.jpg);
+	background-size: 150%;
+}
+
+.left{
+	background-image: url(https://static1.squarespace.com/static/54e8ba93e4b07c3f655b452e/t/56c2a04520c64707756f4267/1493764650017/);
+	background-size: 140%;
+}
+
+.front{
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmhEq-cVkfDwUsR3mZAyzaTVASiQwh2OHIqi9bQckILFrw06Cevg);
+	background-size: 100%;
+}
+
+.back{
+	background-image: url(https://i.pinimg.com/236x/92/9a/a2/929aa223cf2e7d9d1819e63aee9b6221.jpg);
+	background-size: 100%;
+}
+
+</style>
+
+<body>
+
+<div class="stage">
+<div class="cube">
+<figure class="back"></figure>
+<figure class="top"></figure>
+<figure class="bottom"></figure>
+<figure class="left"></figure>
+<figure class="right"></figure>
+<figure class="front"></figure>
+</div>
+</div>
+
+</body>
+</html>
